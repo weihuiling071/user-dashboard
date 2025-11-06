@@ -7,7 +7,7 @@ import './styles/index.scss';
 
 const App = () => {
   return (
-    <div className="bg-gray-900">
+    <div>
       <UserProvider>
         <Routes>
           <Route index element={<UserDetailsPage />} />
