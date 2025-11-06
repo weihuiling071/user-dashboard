@@ -1,6 +1,6 @@
-const HtmlWebpackPlugin = require ('html-webpack-plugin');
-const ModuleFederationPlugin = require ('webpack/lib/container/ModuleFederationPlugin');
-const path = require ('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
+const path = require('path');
 
 module.exports = {
   entry: './src/index.js',
@@ -50,7 +50,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new ModuleFederationPlugin ({
+    new ModuleFederationPlugin({
       name: 'userList',
       filename: 'remoteEntry.js',
       exposes: {
@@ -75,7 +75,7 @@ module.exports = {
         axios: {singleton: true},
       },
     }),
-    new HtmlWebpackPlugin ({
+    new HtmlWebpackPlugin({
       template: './public/index.html',
     }),
   ],
