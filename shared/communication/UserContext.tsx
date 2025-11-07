@@ -35,7 +35,7 @@ export const UserProvider: React.FC<{
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [fetchUsers]);
 
   useEffect(() => {
     refresh();
@@ -49,7 +49,7 @@ export const UserProvider: React.FC<{
 
   const contextValue = useMemo<ContextValue>(
     () => ({ users, loading, selectedUser, setSelectedUser, refresh, updateUser }),
-    [users, loading, selectedUser, updateUser]
+    [users, loading, selectedUser, updateUser, refresh]
   );
   return <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>;
 };

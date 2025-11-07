@@ -4,7 +4,7 @@ import { User, fetchUserById, UserContext } from 'container/shared';
 import UserForm from '../components/UserForm';
 import { Layout, message, Spin } from 'antd';
 const { Header, Footer, Sider, Content } = Layout;
-import '../styles/index';
+
 const UserDetailsPage: React.FC<{ internalUser?: User }> = ({ internalUser }) => {
   const { id } = useParams();
   const navigate = useNavigate();
